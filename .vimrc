@@ -54,16 +54,16 @@ map <C-n> :NERDTreeToggle<CR>
 
 " ===================== editing ===================== 
 filetype plugin indent on       "show existing tab with 4 spaces width
-set tabstop=4                   " when indenting with >, use 4 spaces width
-set shiftwidth=4                " On pressing tab, insert 4 spaces
+set tabstop=2                   " when indenting with >, use 4 spaces width
+set shiftwidth=2                " On pressing tab, insert 4 spaces
 set expandtab""'"'"
 set nowrap                      " don't wrap lines
-set tabstop=4                   " a tab is four spaces
+set tabstop=2                   " a tab is four spaces
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 set number relativenumber       " always show line numbers
-set shiftwidth=4  " number of spaces to use for autoindenting
+set shiftwidth=2  " number of spaces to use for autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 set ignorecase    " ignore case when searching

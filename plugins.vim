@@ -16,6 +16,5 @@ Plug 'sheerun/vim-polyglot'
 
 " Colou scheme
 Plug 'joshdick/onedark.vim'
-Plug 'ryanoasis/vim-devicons'
 
 call plug#end()

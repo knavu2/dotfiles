@@ -13,6 +13,7 @@ Plug 'yggdroot/indentline'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
+Plugin 'pangloss/vim-javascript'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'

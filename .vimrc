@@ -71,7 +71,7 @@ set smartcase     " ignore case if search pattern is all lowercase, case-sensiti
 set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
-
+:set list lcs=tab:\|\  
 
 " Better display for messages
 set cmdheight=2
@@ -132,7 +132,7 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
+map <F2> <Plug>(coc-rename)
 
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)

@@ -26,11 +26,16 @@ logInstallingDone Vim-Plug
 
 # Copy plugin file to ~/.vim/
 echo "Copying ${SCRIPTPATH}/plugins.vim to ~/.vim/plugins.vim"
+mkdir ~/.vim
 cp "${SCRIPTPATH}/plugins.vim" ~/.vim/plugins.vim
 
 # Copying .vimrc file to home
 echo "Copying ${SCRIPTPATH}/.vimrc to ~/.vimrc"
 cp "${SCRIPTPATH}/.vimrc" ~/.vimrc
+
+# Copying vim.init to ~/.config/nvim/init.vim
+mkdir -p ~/.config/nvim/
+cp "${SCRIPTPATH}/init.vim" ~/.config/nvim/init.vim
 
 # Install Vim plugins
 logInstalling "vim plugins"

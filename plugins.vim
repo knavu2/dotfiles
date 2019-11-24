@@ -8,10 +8,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'bling/vim-airline'
 Plug 'yggdroot/indentline'
 Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'

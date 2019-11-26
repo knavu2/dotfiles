@@ -15,6 +15,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'dyng/ctrlsf.vim'
+Plug 'alvan/vim-closetag'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'

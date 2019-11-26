@@ -196,3 +196,7 @@ let g:ctrlp_show_hidden = 1
 
 " ctrlsf config
 nnoremap <leader><S-f> :CtrlSF 
+
+
+"vim-close
+let g:closetag_filenames = "*.html,*.jsx,*.tsx"

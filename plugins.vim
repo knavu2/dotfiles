@@ -14,6 +14,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
+Plug 'dyng/ctrlsf.vim'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'

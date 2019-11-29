@@ -16,6 +16,8 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 Plug 'dyng/ctrlsf.vim'
 Plug 'alvan/vim-closetag'
+Plug 'tommcdo/vim-fugitive-blame-ext'
+Plug 'vimwiki/vimwiki'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'

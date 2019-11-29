@@ -71,7 +71,7 @@ set smartcase     " ignore case if search pattern is all lowercase, case-sensiti
 set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
-:set list lcs=tab:\|\  
+set list lcs=tab:\|\  
 
 " Better display for messages
 set cmdheight=2
@@ -214,3 +214,6 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown'
 "Syntax highlighting in Markdown
 au BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['bash=sh', 'css', 'django', 'handlebars', 'javascript', 'js=javascript', 'json=javascript', 'perl', 'php', 'python', 'ruby', 'sass', 'xml', 'html']
+
+
+

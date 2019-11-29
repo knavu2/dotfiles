@@ -210,3 +210,7 @@ let wiki_1.ext = '.md'
 
 let g:vimwiki_list = [wiki_1]
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+
+"Syntax highlighting in Markdown
+au BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['bash=sh', 'css', 'django', 'handlebars', 'javascript', 'js=javascript', 'json=javascript', 'perl', 'php', 'python', 'ruby', 'sass', 'xml', 'html']

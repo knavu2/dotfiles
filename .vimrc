@@ -34,6 +34,10 @@ set noswapfile
 set title                " change the terminal'"s title
 set visualbell           " don't beep
 set noerrorbells         " dont beep
+set wrap linebreak nolist
+set textwidth=80
+set wm=2
+
 let NERDTreeShowHidden=1
 
 " coc config

@@ -33,6 +33,10 @@ cp "${SCRIPTPATH}/plugins.vim" ~/.vim/plugins.vim
 echo "Copying ${SCRIPTPATH}/.vimrc to ~/.vimrc"
 cp "${SCRIPTPATH}/.vimrc" ~/.vimrc
 
+# Copying .bashrc file to home
+echo "Copying ${SCRIPTPATH}/.bashrc to ~/.bashrc"
+cp "${SCRIPTPATH}/.bashrc" ~/.bashrc
+
 # Copying vim.init to ~/.config/nvim/init.vim
 mkdir -p ~/.config/nvim/
 cp "${SCRIPTPATH}/init.vim" ~/.config/nvim/init.vim

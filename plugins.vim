@@ -19,6 +19,8 @@ Plug 'alvan/vim-closetag'
 Plug 'tommcdo/vim-fugitive-blame-ext'
 Plug 'vimwiki/vimwiki'
 Plug 'chazy/dirsettings'
+Plug 'fatih/vim-go'
+Plug 'vim-airline/vim-airline-themes'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'

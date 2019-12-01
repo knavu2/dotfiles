@@ -89,6 +89,8 @@ set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set list lcs=tab:\|\  
 
+nnoremap <tab> :buffers<CR>:b<space>
+
 " Better display for messages
 set cmdheight=2
 

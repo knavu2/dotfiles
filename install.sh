@@ -40,6 +40,7 @@ cp "${SCRIPTPATH}/.bashrc" ~/.bashrc
 # Copying vim.init to ~/.config/nvim/init.vim
 mkdir -p ~/.config/nvim/
 cp "${SCRIPTPATH}/init.vim" ~/.config/nvim/init.vim
+cp "${SCRIPTPATH}/coc-settings.json" ~/.config/nvim/
 
 # Install Vim plugins
 logInstalling "vim plugins"

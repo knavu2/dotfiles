@@ -88,6 +88,7 @@ set smarttab      " insert tabs on the start of a line according to shiftwidth, 
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set list lcs=tab:\|\  
+nmap <leader>v :vsplit<space> 
 
 nnoremap <tab> :buffers<CR>:b<space>
 
@@ -233,3 +234,6 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown'
 au BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['bash=sh', 'css', 'django', 'handlebars', 'javascript', 'go', 'js=javascript', 'json=javascript', 'perl', 'php', 'python', 'ruby', 'sass', 'xml', 'html']
 
+if @% == ""
+  :silent edit ~/vimwiki/index.md
+endif

@@ -21,6 +21,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'chazy/dirsettings'
 Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'reasonml-editor/vim-reason-plus'
+
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'

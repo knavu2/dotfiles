@@ -1,3 +1,10 @@
 {
-  "coc.preferences.noselect": false,
+  "languageserver": {
+    "reason": {
+    "command": "reason-language-server",
+    "filetypes": ["reason"]
+    }
+  },
+  "suggest.echodocSupport": true,
+  "suggest.noselect": false
 }

@@ -60,6 +60,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
   \ 'coc-prettier',
   \ 'coc-json',
+  \ 'coc-reason'
   \ ]
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
 autocmd FileType json syntax match Comment +\/\/.\+$+
@@ -152,6 +153,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 map <F2> <Plug>(coc-rename)
+map <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)

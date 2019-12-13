@@ -46,6 +46,10 @@ mkdir -p ~/.config/nvim/
 cp "${SCRIPTPATH}/init.vim" ~/.config/nvim/init.vim
 cp "${SCRIPTPATH}/coc-settings.json" ~/.config/nvim/
 
+# tmux
+echo "Copying ${SCRIPTPATH}/.tmux.conf to ~/"
+cp "${SCRIPTPATH}/.tmux.conf" ~/
+
 # Install Vim plugins
 logInstalling "vim plugins"
 vim +PlugInstall +qall

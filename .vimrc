@@ -19,6 +19,13 @@ source ~/.vim/plugins.vim
 "leader key"
 let mapleader=","
 
+"Navigation remapping"
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+
 " Quickly reload/edit the vimrc file
 nmap <silent> <leader>ev :tabnew $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
@@ -70,6 +77,14 @@ autocmd FileType jsonc syntax match Comment +\/\/.\+$+
 map <C-n> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
 
+" ale
+let g:ale_linters = {
+\   'reason': ['reason-language-server'],
+\}
+let g:ale_fixers = {
+\   'reason': ['refmt'],
+\}
+nmap <leader>af <plug>(ale_fix)
 " ===================== editing ===================== 
 filetype plugin indent on       "show existing tab with 4 spaces width
 set tabstop=2                   " when indenting with >, use 4 spaces width

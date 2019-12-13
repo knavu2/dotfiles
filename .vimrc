@@ -16,6 +16,7 @@ let g:airline_theme='papercolor'
 " ======== PLUGINS BEGIN ===========
 source ~/.vim/plugins.vim
 " ========= PLUGINS END ============
+
 "leader key"
 let mapleader=","
 
@@ -228,7 +229,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " ctrlp config
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|Pods'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|Pods\|ios\|android'
 let g:ctrlp_show_hidden = 1
 
 " ctrlsf config
@@ -254,3 +255,4 @@ let g:markdown_fenced_languages = ['bash=sh', 'css', 'django', 'handlebars', 'ja
 if @% == ""
   :silent edit ~/vimwiki/index.md
 endif
+

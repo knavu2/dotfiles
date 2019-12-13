@@ -11,3 +11,5 @@ export PATH=$PATH:/home/nam/.yarn/bin/
 export JAVA_HOME=~/android-studio/jre/
 
 alias studio='studio.sh'
+
+source ~/.bashrc

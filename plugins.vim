@@ -22,6 +22,7 @@ Plug 'chazy/dirsettings'
 Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'reasonml-editor/vim-reason-plus'
+Plug 'christoomey/vim-tmux-navigator'
 
 
 " Syntax highlighting

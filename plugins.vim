@@ -21,14 +21,13 @@ Plug 'vimwiki/vimwiki'
 Plug 'chazy/dirsettings'
 Plug 'fatih/vim-go'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'reasonml-editor/vim-reason-plus'
 Plug 'christoomey/vim-tmux-navigator'
-
+Plug 'arzg/vim-colors-xcode'
 
 " Syntax highlighting
 Plug 'sheerun/vim-polyglot'
 
-" Colou scheme
+" Colour scheme
 Plug 'joshdick/onedark.vim'
 
 call plug#end()

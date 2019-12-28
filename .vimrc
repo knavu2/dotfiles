@@ -68,7 +68,6 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
   \ 'coc-prettier',
   \ 'coc-json',
-  \ 'coc-reason'
   \ ]
 autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
 autocmd FileType json syntax match Comment +\/\/.\+$+
@@ -78,13 +77,6 @@ autocmd FileType jsonc syntax match Comment +\/\/.\+$+
 map <C-n> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
 
-" ale
-let g:ale_linters = {
-\   'reason': ['reason-language-server'],
-\}
-let g:ale_fixers = {
-\   'reason': ['refmt'],
-\}
 nmap <leader>af <plug>(ale_fix)
 " ===================== editing ===================== 
 filetype plugin indent on       "show existing tab with 4 spaces width

@@ -78,6 +78,7 @@ map <C-n> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
 
 nmap <leader>af <plug>(ale_fix)
+
 " ===================== editing ===================== 
 filetype plugin indent on       "show existing tab with 4 spaces width
 set tabstop=2                   " when indenting with >, use 4 spaces width
@@ -227,6 +228,7 @@ let g:ctrlp_show_hidden = 1
 " ctrlsf config
 nnoremap <leader><S-f> :CtrlSF 
 
+inoremap § `
 
 "vim-close
 let g:closetag_filenames = "*.html,*.jsx,*.tsx"

@@ -26,6 +26,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+inoremap {<CR> {<CR>}<C-o>O
 
 " Quickly reload/edit the vimrc file
 nmap <silent> <leader>ev :tabnew $MYVIMRC<CR>
@@ -69,15 +70,10 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-json',
   \ ]
-autocmd BufRead,BufNewFile tsconfig.json set filetype=jsonc
-autocmd FileType json syntax match Comment +\/\/.\+$+
-autocmd FileType jsonc syntax match Comment +\/\/.\+$+
 
 " key mappings
 map <C-n> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeFind<CR>
-
-nmap <leader>af <plug>(ale_fix)
 
 " ===================== editing ===================== 
 filetype plugin indent on       "show existing tab with 4 spaces width
@@ -98,9 +94,6 @@ set smarttab      " insert tabs on the start of a line according to shiftwidth, 
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set list lcs=tab:\|\  
-nmap <leader>v :vsplit<space> 
-
-nnoremap <tab> :buffers<CR>:b<space>
 
 " Better display for messages
 set cmdheight=2
@@ -158,7 +151,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 map <F2> <Plug>(coc-rename)
@@ -168,14 +161,6 @@ map <leader>rn <Plug>(coc-rename)
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
@@ -184,21 +169,6 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
 nmap <leader>qf  <Plug>(coc-fix-current)
-
-" Create mappings for function text object, requires document symbols feature of languageserver.
-xmap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap if <Plug>(coc-funcobj-i)
-omap af <Plug>(coc-funcobj-a)
-
-" Use `:Format` to format current buffer
-silent! command! -nargs=0 Format :call CocAction('format')
-
-" Use `:Fold` to fold current buffer
-silent! command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" use `:OR` for organize import of current buffer
-silent! command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
@@ -214,12 +184,6 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols
 nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " ctrlp config
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|Pods\|ios\|android'
@@ -243,10 +207,11 @@ let g:vimwiki_list = [wiki_1]
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
 "Syntax highlighting in Markdown
-au BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['bash=sh', 'css', 'django', 'handlebars', 'javascript', 'go', 'js=javascript', 'json=javascript', 'perl', 'php', 'python', 'ruby', 'sass', 'xml', 'html']
 
 if @% == ""
   :silent edit ~/vimwiki/index.md
 endif
 
+let g:ctrlsf_ignore_dir = ['android', 'node_modules', 'ios']
